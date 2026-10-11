@@ -12,15 +12,15 @@ class FactoriaPersonaje:
                     "tipo": "Heroe",
                     "identificador": personaje.identificador,
                     "nombre": personaje.nombre,
-                    "apellidos": f"{personaje.primer_apellido} {personaje.segundo_apellido}",
+                    "primer_apellido": personaje.primer_apellido,
+                    "segundo_apellido": personaje.segundo_apellido,
+                    "fecha_nacimiento": personaje.fecha_nacimiento,
                     "edad": personaje.calcular_edad(),
-                    "cualidades": {
-                        "codigo_limpio": personaje.codigo_limpio,
-                        "bien_documentado": personaje.bien_documentado,
-                        "git_god": personaje.git_god,
-                        "arquitecto": personaje.arquitecto,
-                        "detallista": personaje.detallista
-                    },
+                    "codigo_limpio": personaje.codigo_limpio,
+                    "bien_documentado": personaje.bien_documentado,
+                    "git_god": personaje.git_god,
+                    "arquitecto": personaje.arquitecto,
+                    "detallista": personaje.detallista,
                     "puntuacion_total": personaje.puntuacion_total
                 }
             elif tipo_lower == "villano":
@@ -29,14 +29,14 @@ class FactoriaPersonaje:
                     "tipo": "Villano",
                     "identificador": personaje.identificador,
                     "nombre": personaje.nombre,
-                    "apellidos": f"{personaje.primer_apellido} {personaje.segundo_apellido}",
+                    "primer_apellido": personaje.primer_apellido,
+                    "segundo_apellido": personaje.segundo_apellido,
+                    "fecha_nacimiento": personaje.fecha_nacimiento,
                     "edad": personaje.calcular_edad(),
-                    "cualidades": {
-                        "chagepeteador": personaje.chagepeteador,
-                        "entregador_tardio": personaje.entregador_tardio,
-                        "ausencias": personaje.ausencias,
-                        "hablador": personaje.hablador
-                    },
+                    "chagepeteador": personaje.chagepeteador,
+                    "entregador_tardio": personaje.entregador_tardio,
+                    "ausencias": personaje.ausencias,
+                    "hablador": personaje.hablador,
                     "puntuacion_total": personaje.puntuacion_total
                 }
             else:

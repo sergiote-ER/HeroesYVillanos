@@ -4,8 +4,7 @@ from random import randint
 
 
 class Persona:
-    def __init__(self, nombre, primer_apellido, segundo_apellido, fecha_nacimiento, identificador, tipo):
-        self.tipo = tipo
+    def __init__(self, nombre, primer_apellido, segundo_apellido, fecha_nacimiento, identificador):
         self.nombre = nombre
         self.primer_apellido = primer_apellido
         self.segundo_apellido = segundo_apellido
@@ -14,12 +13,13 @@ class Persona:
 
     def calcular_edad(self):
         try:
-            nacimiento = datetime.strptime(self.fecha_nacimiento, "%Y-%m-%d")
+            f_limpia = self.fecha_nacimiento.strip()
+            nacimiento = datetime.strptime(f_limpia, "%d-%m-%Y")
             hoy = datetime.now()
             edad = hoy.year - nacimiento.year - ((hoy.month, hoy.day) < (nacimiento.month, nacimiento.day))
             return edad
         except Exception:
-            return "Fecha inválida"
+            return "Fecha invalida"
 
     def definir_puntuacion(self):
         pass
