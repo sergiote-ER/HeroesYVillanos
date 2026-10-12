@@ -8,7 +8,6 @@ def main():
     fabrica = FactoriaPersonaje()
     registro_personajes = []
 
-    # Bloque try-except para la inicialización de los personajes de prueba (añadido el identificador que faltaba)
     try:
         registro_personajes.append(
             fabrica.crear_personaje("heroe", "Francisco", "Escobar", "López", "19-01-1968", "H001"))
@@ -54,7 +53,7 @@ def main():
                         contador_tipo = contador_tipo + 1
 
                 numero = contador_tipo + 1
-                iden = f"{prefijo}{numero:03d}"  # Ejemplo: H001, H002, V001, V002...
+                iden = f"{prefijo}{numero:03d}"
 
                 nuevo = fabrica.crear_personaje(tipo, nombre, p_apellido, s_apellido, f_nac, iden)
                 registro_personajes.append(nuevo)
